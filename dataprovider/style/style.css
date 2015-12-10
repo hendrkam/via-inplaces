@@ -1,0 +1,169 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 10px #000;
+  color: #fff;
+  background: #888;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#top{
+	float: left;
+	text-align: center;
+	width: 99%;
+	margin:1px;
+}
+
+#menu{
+	background-color: rgba(128,128,128,0.5);
+	border-radius: 25px;
+	float: left;
+	width: 15%;
+	padding:25px;
+	margin:5px;
+	margin-left:20px;
+}
+
+#content{
+	background-color: rgba(128,128,128,0.5);
+	border-radius: 20px;
+	width: 70%;
+	float: left;
+	padding:25px;
+	margin:5px;
+	margin-left:20px;
+}
+
+#foot{
+	width: 99%;
+	font-size: 0.7em;
+	margin:3px;
+	text-align: right;
+}
+
+#settings{
+	float:right;
+	padding:1px;
+	margin:1px;
+}
+
+
+h1{
+  font-size: 2em;
+  color: #fff;
+  margin:5px;
+}
+
+h2{
+  color: #fff;
+}
+
+p{
+  font-size: 1.0em;
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  font-size: 0.5em;
+}
+
+#temperature{
+  text-decoration: none;
+  border-bottom: 0.05em dotted white;
+}
+
+.menuItem {
+	background-color: rgba(250,250,250,0.5);
+	border-radius: 5px;
+	font-size: 1.1em;
+	width: 95%;
+	padding:2px;
+	margin:5px;
+}
+
+.menuItem:hover {
+	background-color: rgba(150,150,150,0.7);
+}
+
+.box {
+	border-radius: 10px;
+	padding:20px;
+	margin:15px;
+}
+
+.formElement{
+		width: 20%;
+		float:left;
+
+}
+
+.success{
+	background-color: rgba(15,200,15,1.0);
+	border-radius: 5px;
+	display: inline-block;
+	padding:20px;
+	margin:15px;
+	font-size: 1.6em;
+}
+
+.document{
+	background-color: rgba(125,125,125,0.7);
+	border-radius: 5px;
+	padding:20px;
+	margin:15px;
+	margin:15px;
+}
+
+.document{
+	background-color: rgba(125,125,125,0.7);
+	border-radius: 5px;
+	padding:20px;
+	margin:15px;
+	margin:15px;
+}
+
+.document{
+	background-color: rgba(125,125,125,0.7);
+	border-radius: 5px;
+	padding:20px;
+	margin:15px;
+	margin:15px;
+}
+
+#t01{
+	border: 1px solid black;
+	border-collapse: collapse;
+
+}
+
+table#t01 tr:nth-child(even) {
+	border: 1px solid black;
+	border-collapse: collapse;
+    background-color: #777;
+}
+
+table#t01 tr:nth-child(odd) {
+    background-color: #777;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+table#t01 th {
+	border: 1px solid black;
+	border-collapse: collapse;
+    color: white;
+    background-color: rgba(75,75,75,0.7);
+}
+
+
+
+

@@ -1,0 +1,1 @@
+CREATE TABLE `hendrich.wz.6240`.`prispevek` ( `id` VARCHAR(36) NOT NULL , `nazev` VARCHAR(256) NOT NULL , `autor` VARCHAR(256) NOT NULL , `popis` VARCHAR(10000) NOT NULL , `idKategorie` INT NOT NULL , `latitide` DOUBLE NOT NULL , `longitude` DOUBLE NOT NULL , `photoURL` VARCHAR(256) NOT NULL , `datum` VARCHAR(50) NOT NULL ) ENGINE = InnoDB;

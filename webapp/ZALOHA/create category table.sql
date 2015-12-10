@@ -1,0 +1,1 @@
+CREATE TABLE `hendrich.wz.6240`.`categories` ( `id` INT NOT NULL , `nazev` VARCHAR(256) NOT NULL , `popis` VARCHAR(10000) NOT NULL , PRIMARY KEY (`id`) ) ENGINE = InnoDB;
