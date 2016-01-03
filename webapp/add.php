@@ -5,16 +5,16 @@
 	<h2><img src="img/add.png" alt="icon" class="image" height="64" width="64"/> Add new place</h2>
 	
 	<form class="box" action="index.php?p=added" method="post" enctype="multipart/form-data">
-		<div class="formElement">Title: </div><input type="text" name="title">
+		<div class="formElement">Title: </div><input type="text" name="title" required>
 		</br>
 		</br>
 		
-		<div class="formElement">Author name: </div><input type="name" name="name">
+		<div class="formElement">Author name: </div><input type="name" name="name" required>
 		</br>
 		</br>
 
 		<div class="formElement">Description:</div>
-			<textarea name="description" cols="80" rows="6" placeholder="Write a description"></textarea>
+			<textarea name="description" cols="80" rows="6" placeholder="Write a description" required></textarea>
 		</br>
 		</br>
 	
@@ -52,7 +52,7 @@
 		<div class="formElement" ><dd>Longitude: </dd></div><input type="text" id="us2-lon" name="long"/>
 		</br>
 		<p><dd>
-			<div class="formElement">
+			<div >
 				<div id="us2" style="width: 400px; height: 300px;"></div>
 			</div>
 		</dd></p>				
@@ -70,10 +70,15 @@
 			});
 		</script>
 		
-		</br></br></br></br></br></br></br></br></br></br>
+		</br>
 		<div>
 			<div class="formElement"><dd><input type="submit" class="btn" class="specialbutton" value="Add"></dd></div>
 		</div>
+		</br>
+		</br>
 	</form>
+	</br>
+	</br>
 
 </div>
+</br>

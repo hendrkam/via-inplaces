@@ -15,29 +15,19 @@
 			</dd>	
 			</br>
 			
-		<script>
+	<script>
 		
-			$('#us2').locationpicker({
-				location: {latitude: 50.0880400, longitude: 14.4207600},	
-				radius: 1,
-				inputBinding: {
-				latitudeInput: $('#us2-lat'),
-				longitudeInput: $('#us2-lon'),
-				radiusInput: $('#us2-radius'),
-				locationNameInput: $('#us2-address')
-			}
-			});
-		</script>
+		$('#us2').locationpicker({
+			location: {latitude: 50.0880400, longitude: 14.4207600},	
+			radius: 1,
+			inputBinding: {
+			latitudeInput: $('#us2-lat'),
+			longitudeInput: $('#us2-lon'),
+			radiusInput: $('#us2-radius'),
+			locationNameInput: $('#us2-address')
+		}
+		});
 
-
-			</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
-			<div class="formElement"><dd><input type="submit" class="btn"  onClick="javascript:getWeather()" value="Show weather"></dd></div></br></br></br>
-		
-
-			
-	
-<script>
-	
 	
     function getWeather()
 		{
@@ -50,16 +40,13 @@
 					  
 						$('#textBox').text("Weather forecast");
 						$('#city').text(response.city.name +", "+ response.city.country);
-						$('#temperature').text(response.city.name);
-						$('#weather').text(response.list[0].weather[0].description);
+						$('#temperature').text("Temperature: " + response.list[0].main.temp);
+						$('#weather').text("Description: " + response.list[0].weather[0].description);
 						$('#position').text("Position - Latitude: " + response.city.coord.lat + ", Longitude: " + response.city.coord.lon);
-						$('#wind').text(response.city.name);
-						wind speed
-						$('#presure').text(response.city.name);
-						presure
-						$('#humidity').text(response.city.name);
-						humidity
 						
+						$('#wind').text("Wind speed: "+ response.list[0].wind.speed + ", wind deg"+response.list[0].wind.deg);
+						$('#humidity').text("Humidity: " + response.list[0].main.humidity);
+						$('#pressure').text("Pressure: " + response.list[0].main.pressure);
 						
 					  
 					}, false);
@@ -80,15 +67,23 @@
 				alert("Unable to fetch weather data.");
 			  }   
 		  } 
-</script>
+	</script>
+
+
+			</br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+			<div class="formElement"><dd><input type="submit" class="btn"  onClick="javascript:getWeather()" value="Show weather"></dd></div></br></br></br>
+		
+
+			
+	
 			
 			<div id="weatherinfo">
-				<h3 id="textBox">
-				</h3>
+				<h2 id="textBox">
+				</h2>
 				<dd>
-					<p id="city">
+					<h3 id="city">
 					
-					</p>
+					</h3>
 					
 					<p id="temperature">
 					
@@ -100,6 +95,19 @@
 					<p id="position">
 					
 					</p>
+					<p id="wind">
+					
+					</p>
+					<p id="humidity">
+					
+					</p>
+					<p id="pressure">
+					
+					</p>
+					<p id="table">
+						tabulka s nekolikadenni predpovedi....
+					</p>
+
 				</dd>
 			</div>
 			

@@ -5,6 +5,7 @@
   	<meta charset="utf-8">
     <title>In-places web mashup</title>
 	 <link rel="stylesheet" href="style/style.css">
+	 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	 
 	 <script src="script/jquery.js"></script>
 	 <script src="script/script.js"></script>   
@@ -37,7 +38,10 @@
 						break;	
 				  case 'generate':
 						$adresa = "generate.php";
-						break;					
+						break;
+				  case 'test':
+						$adresa = "test.php";
+						break;						
 				  default:
 						$adresa = "intro.php";
 						break;

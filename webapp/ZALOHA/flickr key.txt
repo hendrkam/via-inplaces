@@ -2,6 +2,9 @@ In-places web mashup
 Key:
 cec63e743f88e8177f4dcfc54e5bfef8
 
+User ID:
+137644089@N03
+
 Secret:
 76718ee336158162
 76718ee336158162

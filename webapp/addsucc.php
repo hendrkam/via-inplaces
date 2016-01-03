@@ -12,11 +12,11 @@
 			
 <div id="content">		
 	<h2 id="container">
-		...
+		
 	</h2>
 	
 	<p id="imgcontainer">
-		...
+		
 	</p>
 </div>
 
