@@ -1,5 +1,10 @@
 ﻿<!doctype html>
 <html>
+
+	<!-- Index.php 
+		Basic page, Generate Menu, change content, DB connection
+	-->
+	
   <head>
 	<meta name="description" content="Interesting places mashup application by Kamil Hendrich.">
   	<meta charset="utf-8">
@@ -39,6 +44,9 @@
 				  case 'generate':
 						$adresa = "generate.php";
 						break;
+				  case 'photos':
+						$adresa = "photos.php";
+						break;		
 				  case 'test':
 						$adresa = "test.php";
 						break;						
@@ -65,6 +73,7 @@
     	<!--<h2>Menu</h2>-->
 			 <a href="?p=intro"><div class="menuItem"><img src="img/intro.png" alt="icon" class="image" height="32" width="32"/> Introduction</div></a>
 			 <a href="?p=weather"><div class="menuItem"><img src="img/weather.png" alt="icon" class="image" height="32" width="32"/> Weather info</div></a>
+			 <a href="?p=photos"><div class="menuItem"><img src="img/camera.png" alt="icon" class="image" height="32" width="32"/> Photos</div></a></br>
 			 <a href="?p=add"><div class="menuItem"><img src="img/add.png" alt="icon" class="image" height="32" width="32"/> Add new place</div></a>
 			 <!--<a href="?p=dbread"><div class="menuItem"><img src="img/earth.png" alt="icon" class="image" height="32" width="32" /> DB READ Test</div></a>-->
 			 <a href="?p=categories&catid=99"><div class="menuItem"><img src="img/earth.png" alt="icon" class="image" height="32" width="32" /> All categories</div></a>

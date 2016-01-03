@@ -1,6 +1,9 @@
 <div id="content">
 <?php
-	/* Vypis prispevku podle kategorii */
+		/* 
+		    ContentPage.php
+			Vypis vsech prispevku podle kategorii 
+		*/
 
 			include "db_connect.php";
 			

@@ -1,6 +1,9 @@
 <div id="content">
 		<?php
-		/* Jednotlive prispevky*/
+		/* 
+		    Generate.php
+			Generuje View pro jednotlive prispevky, nacteni dat z DB, Weather informace a Flickr fotky
+		*/
 		
 			include "db_connect.php";
 			
@@ -47,15 +50,97 @@
 
 
 <div class="box">
-<h3>Weather information</h3>
-	<?php
+<h3><img src="img/weather.png" alt="icon" class="image" height="40" width="40"/> Weather information</h3>
+	<div id="localweatherinfo">
+		<dd>
+			<p id="city">
+			
+			</p>		
+			<p id="temperature">
+			
+			</p>
+			
+			<p id="weather">
+			
+			</p>
+			
+			<p id="wind">
+			
+			</p>
+			
+			<p id="humidity">
+			
+			</p>
+			
+			<p id="pressure">
+			
+			</p>
+			
+			<p id="table">
+				
+			</p>
 
-	?>
+		</dd>
+	</div>
+</div>
 
-</div>	
+
+	<script>
+		$( document ).ready(function() {
+			getWeatherByLocation(longitude, latitude);
+		});	
+		
+		function getWeatherByLocation(longitude, latitude) {
+				if (window.XMLHttpRequest)
+				{
+					var xhr = new XMLHttpRequest();
+					xhr.addEventListener("load", function() {
+					  var response = JSON.parse(xhr.responseText);
+					  console.log(response);
+						$('#textBox').text("Weather forecast");
+						$('#city').text(response.city.name +", "+ response.city.country);
+						$('#temperature').text("Temperature: " + Math.round((response.list[0].main.temp-273.15)*10)/10 + " °C");
+						$('#weather').text("Description: " + response.list[0].weather[0].description);
+						$('#weather').html($('#weather').html() + ' <img src="http://openweathermap.org/img/w/'+ response.list[0].weather[0].icon +'.png" alt="icon" class="image" height="50" width="50"/>');
+						$('#wind').text("Wind speed: "+ response.list[0].wind.speed + ", wind degree: "+response.list[0].wind.deg +'°');
+						$('#humidity').text("Humidity: " + response.list[0].main.humidity  + ' %');
+						$('#pressure').text("Pressure: " + response.list[0].main.pressure + ' hPa') ;
+						
+						var tableContent = "</br><h3>Weather forecast 5 days / 3 hours</h3>"; 
+						tableContent += "<div class='weatherTableDiv'><table class='weatherTable'><tr>";
+						$.each(response.list, function(i,item){
+							//alert("press " + item.dt_txt);
+							tableContent += "<td>" + item.dt_txt + "</td>";
+						});
+						
+						tableContent += "</tr><tr>";
+					
+						$.each(response.list, function(i,item){
+							//alert("press " + item.dt_txt);
+							tableContent += "<td>" + Math.round((item.main.temp-273.15)*10)/10 + " °C ";
+							tableContent += '<img src="http://openweathermap.org/img/w/'+ item.weather[0].icon +'.png" alt="icon" class="image" height="50" width="50"/>'+  "</td>";
+						});
+						
+						tableContent += "</tr></div>";
+					  $('#table').html(tableContent);
+						
+						
+					}, false);
+					xhr.addEventListener("error", function(err){
+					  alert("Could not complete the request");
+				}, false);
+				xhr.open("GET", "http://api.openweathermap.org/data/2.5/forecast?APPID=5881349e5d705169c253902c3e35470b&lat="+latitude+"&lon="+longitude, true);
+				xhr.send();
+			  }
+			  else{
+				alert("Unable to fetch weather data.");
+			  }   		
+		}
+	</script>
+	
 
 <div class="box">
-<h3>Flickr photos near this location</h3>
+<h3><img src="img/camera.png" alt="icon" class="image" height="40" width="40"/> Photos near this location</h3>
 	<div id="image-loader"></div>
 	<div id="image-container"></div>
 	<script>
@@ -136,8 +221,13 @@
 									return photoCount != 20;
 								});	    
 							});
+
+						
 						});
 					
+					
+	
+		
 
 
 

@@ -83,7 +83,6 @@ footer{
 
 #temperature{
   text-decoration: none;
-  border-bottom: 0.05em dotted white;
 }
 
 #image {
@@ -101,7 +100,7 @@ footer{
 	font-size: 1.1em;
 	width: 95%;
 	padding:2px;
-	margin:5px;
+	margin:5px;	
 }
 
 .menuItem:hover {
@@ -140,6 +139,22 @@ footer{
 	margin:5px;
 	float:left;
 }
+
+.weatherTableDiv {
+	overflow-x:scroll;
+}
+
+.weatherTable {
+	table-layout: fixed;
+	border: 2px solid white;
+}
+
+.weatherTable >  th, td {
+	border: 1px solid white;
+	padding:8px;
+}
+
+
 
 .inbox {
 

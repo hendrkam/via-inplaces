@@ -1,5 +1,11 @@
 
 	<?php
+		/* 
+		    DB_connect.php
+			Pripojeni k DB 
+		*/
+
+	
 		//$servername = "sql2.webzdarma.cz";
 		//$username = "hendrich.wz.6240";
 		//$password = "viadb91";

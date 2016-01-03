@@ -9,7 +9,9 @@
 	}
 	
 </script>
-			
+	<!-- Addsucc.php 
+		DB vlozeni dat z formulare, ulozeni fotografie
+	-->
 <div id="content">		
 	<h2 id="container">
 		

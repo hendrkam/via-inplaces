@@ -1,6 +1,8 @@
 
 <script type="text/javascript" src='http://maps.google.com/maps/api/js?libraries=places'></script>
-
+	<!-- Add.php 
+		Formular pro pridavani prispevku
+	-->
 <div id="content">		
 	<h2><img src="img/add.png" alt="icon" class="image" height="64" width="64"/> Add new place</h2>
 	

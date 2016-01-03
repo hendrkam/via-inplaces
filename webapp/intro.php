@@ -1,4 +1,7 @@
 <div id="content">
+	<!-- Intro.php 
+		Uvodni stranka, informace o aplikace a odkazy na pouzite technologie
+	-->
 	<h2><img src="img/intro.png" alt="icon" class="image" height="64" width="64"/> Introduction</h2>
 	<dd><p>
 		In-places is a web mashup application that is used to gather information about interesting places in the world. You can upload your experiences or browse other people's posts. 
